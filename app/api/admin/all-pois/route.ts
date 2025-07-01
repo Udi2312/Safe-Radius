@@ -1,8 +1,8 @@
+export const dynamic = "force-dynamic";
 import { type NextRequest, NextResponse } from "next/server"
 import jwt from "jsonwebtoken"
 import { connectDB } from "@/lib/mongodb"
 import POI from "@/models/POI"
-export const dynamic = "force-dynamic";
 
 const JWT_SECRET = process.env.JWT_SECRET || "saferadius-jwt-secret-2024"
 

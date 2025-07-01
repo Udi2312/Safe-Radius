@@ -22,6 +22,7 @@ interface POIFormData {
   city: string
   pinCode: string
   category: string
+  // createdBy: string 
 }
 
 interface MyPOI {
@@ -43,6 +44,7 @@ export default function OwnerDashboard() {
     city: "",
     pinCode: "",
     category: "other",
+    
   })
   const [myPOIs, setMyPOIs] = useState<MyPOI[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -110,7 +112,10 @@ export default function OwnerDashboard() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify(formData),
+       body: JSON.stringify({
+  ...formData,
+  createdBy: user?._id,
+})
       })
 
       const data = await response.json()
@@ -127,6 +132,7 @@ export default function OwnerDashboard() {
           city: "",
           pinCode: "",
           category: "other",
+          // createdBy: user?.id || "", 
         })
         fetchMyPOIs() // Refresh the list
       } else {

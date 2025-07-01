@@ -3,6 +3,7 @@ import { type NextRequest, NextResponse } from "next/server"
 import jwt from "jsonwebtoken"
 import { connectDB } from "@/lib/mongodb"
 import POI from "@/models/POI"
+import User from "@/models/User"
 
 const JWT_SECRET = process.env.JWT_SECRET || "saferadius-jwt-secret-2024"
 

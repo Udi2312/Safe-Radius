@@ -224,7 +224,7 @@ const decryptData = (encryptedData) => {
 }
 \`\`\`
 
-## 🚀 Deployment
+<!-- ## 🚀 Deployment
 
 ### Vercel (Recommended)
 1. Push code to GitHub
@@ -238,7 +238,7 @@ MONGODB_URI=your-production-mongodb-uri
 JWT_SECRET=your-production-jwt-secret
 ENCRYPTION_KEY=your-production-encryption-key
 NEXT_PUBLIC_ENCRYPTION_KEY=your-production-encryption-key
-\`\`\`
+\`\`\` -->
 
 ## 🤝 Contributing
 

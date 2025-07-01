@@ -114,7 +114,7 @@ export default function OwnerDashboard() {
         },
        body: JSON.stringify({
   ...formData,
-  createdBy: user?._id,
+  createdBy: user?.id,
 })
       })
 
